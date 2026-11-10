@@ -62,6 +62,10 @@ Set these **before** sourcing the theme:
 | `@mochalate-window-current-format` | tmux format | `#I:#W` | Current window title format |
 | `@mochalate-window-style` | style string | `""` | Regular window text style |
 | `@mochalate-window-current-style` | style string | `bold` | Current window text style |
+| `@mochalate-tree-mode-border-style` | style string | `fg=#{@thm_border_alt},bg=default` | Borders in tree mode (`choose-tree`, tmux 3.8+) |
+| `@mochalate-tree-mode-preview-style` | style string | `fg=#{@thm_fg_dim},bg=default` | Window/pane labels in tree mode previews |
+| `@mochalate-tree-mode-preview-active-style` | style string | `fg=#{@thm_accent},bg=default` | Active window/pane label in tree mode previews |
+| `@mochalate-display-panes-border-style` | style string | `fg=#{@thm_border_alt},bg=default` | Borders of the `display-panes` overlay (tmux 3.8+) |
 
 ### Module Styles
 
@@ -75,6 +79,8 @@ Customize text style for each module (empty = default):
 | `@mochalate-application-style` | style string | `""` | Application text style |
 | `@mochalate-cpu-style` | style string | `""` | CPU text style |
 | `@mochalate-ram-style` | style string | `""` | RAM text style |
+
+The tree mode and display-panes options take full style strings and may reference theme colors such as `#{@thm_accent}`.
 
 Style values: `bold`, `italic`, `dim`, `underscore`, `blink`, `reverse`, `strikethrough`. Combine with commas: `"bold,italic"`.
 
